@@ -1,0 +1,36 @@
+/**
+ * Layout CSS
+ *
+ * Wrappers, content, sidebars etc.
+ */
+body {
+    background-color: #222;
+}
+
+div#wrapper {
+    background-color: #fff;
+    width: 960px;
+    margin: 20px auto;
+    padding: 40px 20px 10px 20px;
+    -moz-box-shadow: 5px 5px 10px #111;
+    -webkit-box-shadow: 5px 5px 10px #111;
+    box-shadow: 5px 5px 10px #111;
+}
+
+ul#nav {
+    display:block;
+    border-bottom: 1px dotted #ccc;
+    border-top: 1px dotted #ccc;
+    padding:5px 0;
+    margin-bottom: 30px;
+    margin-left: 0px;
+}
+
+ul#nav li {
+    display:inline;
+    margin-right: 20px;
+}
+
+div#content {
+    width: 700px;
+}
