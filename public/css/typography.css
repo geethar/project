@@ -1,0 +1,43 @@
+/**
+ * Typography
+ *
+ * Font sizing, spacing, link styles etc.
+ */
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-family: "Arvo", serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 3em;
+    color:#99f;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+p, blockquote, ol, dl, ul, pre, img, table {
+    margin-bottom: 1em;
+    color: #333;
+    line-height: 1.4em;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: #009;
+}
+
+a:hover {
+    text-decoration: underline;
+}
