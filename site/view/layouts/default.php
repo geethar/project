@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 <html>
@@ -25,14 +26,13 @@
 	    <li class="home"><a href="index.html" title="Fav Photos Home Page">Home</a></li>
 	    <li class="gallery"><a href="gallery.html" title="Gallery Page">Gallery</a></li>	    
 	    <li class="about"><a href="about.html" title="About Us Page">About Us</a></li>
-	    <li class="contact"><span class="active_nav"><a href="contact.html" title="Contact Page">Contact</a></span></li>
+	    <li class="contact"><a href="contact.html" title="Contact Page">Contact</a></li>
 	  </ul> <!-- nav -->
 	  
   </div> <!-- header -->
 
   <div id="content">
-    <h2>About Us</h2>
-    <p>Aliquam aliquet, est a ullamcorper condimentum, tellus nulla fringilla elit, a iaculis nulla turpis sed wisi. Fusce volutpat. Etiam sodales ante id nunc. Proin ornare dignissim lacus. Nunc porttitor nunc a sem. Sed sollicitudin velit eu magna. Aliquam erat volutpat. Vivamus ornare est non wisi. Proin vel quam. Vivamus egestas. Nunc tempor diam vehicula mauris. Nullam sapien eros, facilisis vel, eleifend non, auctor dapibus, pede.</p>
+    <?php $this->renderTemplate() ?>
   </div> <!-- content -->
 
   <div id="footer">

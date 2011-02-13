@@ -1,0 +1,4 @@
+# If requested resource exists as a file or directory
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php [QSA,L]
