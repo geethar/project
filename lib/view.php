@@ -6,9 +6,6 @@ class View {
     private $layoutFilename;
     private $templateFilename;
 
-    public function __construct() {
-    }
-
     public function getLayoutFilename() {
         return $this->layoutFilename;
     }
@@ -34,5 +31,4 @@ class View {
         extract($params);
         include $this->getTemplateFilename();
     }
-
 }
