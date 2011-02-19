@@ -1,0 +1,7 @@
+# public/.htaccess
+
+# if requested file exists, serve it
+# else redirect to index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php [QSA,L]
