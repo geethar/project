@@ -8,11 +8,11 @@
       return $this->layoutFilename;
     }
     
-    pulic function setlayoutFilename($newlayoutFilename) {
+    public function setlayoutFilename($newlayoutFilename) {
       return $this->layoutFilename = $newlayoutFilename;
     }
     
-    public function renderlayoutFilename() {
+    public function renderLayout() {
       include $this->layoutFilename;
     }
     
@@ -24,7 +24,7 @@
       return $this->templateFilename = $newtemplateFilename;
     }
     
-    public function rendertemplateFilename() {
+    public function renderTemplate() {
       include $this->templateFilename;
     }
   }
