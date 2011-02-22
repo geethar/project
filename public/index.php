@@ -9,7 +9,7 @@ $uri = $_SERVER['REQUEST_URI'];
 	
 $templateFilename = '../site/view/pages/' . substr($uri, 1) . '.php';
 
-$view->setLayoutFilename('../site/view/layouts/default.php');
+$view->setLayoutFilename('../site/view/layouts/default.html.php');
 
 if (is_readable($templateFilename)) {
     $view->setTemplateFilename($templateFilename);
