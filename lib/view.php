@@ -1,30 +1,30 @@
 <?php
 
-  class BlahClass {
-    private $blahPrivateProperty;
-    private $anotherPrivateProperty;
+  class View {
+    private $layoutFilename;
+    private $templateFilename;
     
-    public function getblahPrivateProperty() {
-      return $this->blahPrivateProperty;
+    public function getlayoutFilename() {
+      return $this->layoutFilename;
     }
     
-    pulic function setblahPrivateProperty($newBlahPrivateProperty) {
-      return $this->blahPrivateProperty = $newBlahPrivateProperty;
+    pulic function setlayoutFilename($newlayoutFilename) {
+      return $this->layoutFilename = $newlayoutFilename;
     }
     
-    public function renderblahPrivateProperty() {
-      include $this->blahPrivateProperty;
+    public function renderlayoutFilename() {
+      include $this->layoutFilename;
     }
     
-    public function getanotherPrivateProperty() {
-      return $this->$anotherPrivateProperty;
+    public function gettemplateFilename() {
+      return $this->$templateFilename;
     }  
     
-    public function setanotherPrivateProperty($newAnotherPrivateProperty) {
-      return $this->anotherPrivateProperty = $newAnotherPrivateProperty;
+    public function settemplateFilename($newtemplateFilename) {
+      return $this->templateFilename = $newtemplateFilename;
     }
     
-    public function renderanotherPrivateProperty() {
-      include $this->anotherPrivateProperty;
+    public function rendertemplateFilename() {
+      include $this->templateFilename;
     }
   }
