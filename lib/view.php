@@ -53,6 +53,6 @@ class View {
     }
 
     public function renderTemplate() {
-        include $this->templatesDirectory . $this->templateFilename;
+        include $this->templatesDirectory . '/' . $this->templateFilename;
     }
 }
