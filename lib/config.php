@@ -48,7 +48,7 @@ class Config {
      * @param string $value - the value to set the data to
      * @return Config $this - for chainability
      */
-    public function $set($key, $value) {
+    public function set($key, $value) {
         $this->data[$key] = $value;
         return $this;
     }
