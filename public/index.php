@@ -1,5 +1,6 @@
 <?php
 // public/index.php
+error_reporting(E_ALL);
 
 require '../lib/view.php';
 
