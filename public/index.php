@@ -2,7 +2,9 @@
 // public/index.php
 error_reporting(E_ALL);
 
-require '../lib/view.php';
+require_once '../lib/view.php';
+require_once '../lib/config.php';
+
 
 $view = new View();
 
