@@ -17,4 +17,4 @@ if (is_readable($templateFilename)) {
     header("HTTP/1.0 404 Not Found");
     $view->setTemplateFilename('../site/view/pages/404.html.php');
 }
-    $view->render();
+    $view->renderLayout();
