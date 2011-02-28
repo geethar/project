@@ -1,20 +1,24 @@
 <?php
 // public/index.php
 
-require '../lib/view.php';
+//show all errors
+error_reporting(E_ALL);
 
-$view = new View();
+//include all classes in 'lib/ directory
+require_once '../lib/view.php';
+require_once '../lib/config.php';
 
+//set up config object
+$config = new Config('../config.ini');
+
+//set up view object with the config object and default layout 
+$view = new View($config);
+$view->setLayoutFilename('default.html.php');
+
+//determine which template file to load and set it on the view object
 $uri = $_SERVER['REQUEST_URI'];
-	
-$templateFilename = '../site/view/pages/' . substr($uri, 1) . '.php';
+$templateFilename = substr($uri, 1) . '.php';
+$view->setTemplateFilename($templateFilename);
 
-$view->setLayoutFilename('../site/view/layouts/default.html.php');
-
-if (is_readable($templateFilename)) {
-    $view->setTemplateFilename($templateFilename);
-} else {
-    header("HTTP/1.0 404 Not Found");
-    $view->setTemplateFilename('../site/view/pages/404.html.php');
-}
-    $view->render();
+//now that the view object has a template and a layout to render it in, we can call renderLayout()
+$view->renderLayout();
