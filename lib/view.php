@@ -40,7 +40,8 @@ class View {
         return $this->layoutFilename = $newlayoutFilename;
     }
 
-    public function renderLayout() {
+    public function renderLayout($__data = array()) {
+        extract($__data);
         include $this->layoutsDirectory . "/" . $this->layoutFilename;
     }
 
@@ -52,7 +53,8 @@ class View {
         return $this->templateFilename = $newtemplateFilename;
     }
 
-    public function renderTemplate() {
+    public function renderTemplate($__data = array()) {
+        extract($__data);
         include $this->templatesDirectory . '/' . $this->templateFilename;
     }
 }

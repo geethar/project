@@ -10,7 +10,11 @@
             rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/layout.css" type="text/css" />
         <link rel="stylesheet" href="css/typography.css" type="text/css" />
-        <title>Fav Photos</title>   
+
+        <title><?=$title?></title>   
+        <meta name="description" content="<?=$meta_description?>" />
+        <meta name="keywords" content="<?=$meta_keywords?>" />
+
 
     </head>
 
@@ -42,7 +46,7 @@
       </div> <!-- header -->
 
       <div id="content">
-        <?php $this->renderTemplate() ?>
+        <?php $this->renderTemplate($__data) ?>
       </div> <!-- content -->
 
       <div id="footer">
