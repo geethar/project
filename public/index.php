@@ -7,13 +7,9 @@ ini_set('display_errors', 1);
 
 require '../lib/view.php';
 
-echo "First time";
-
 $view = new View();
-echo "Second time";
 
 $uri = $_SERVER['REQUEST_URI'];
-echo "Third time";
 
 $templateFilename = '../site/view/pages/' . substr($uri, 1) . '.php';
 //
