@@ -15,6 +15,8 @@ $templateFilename = '../site/view/pages/' . substr($uri, 1) . '.php';
 
 $view->setLayoutFilename('../site/view/layouts/default.html.php');
 
+echo $view->LayoutFilename;
+
 if (is_readable($templateFilename)) {
     $view->setTemplateFilename($templateFilename);
 } 
