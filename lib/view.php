@@ -4,8 +4,12 @@
     private $layoutFilename;
     private $templateFilename;
     
-    public function __construct() {
+    private $templatesDirectory;
+    private $layoutsDirectory;
     
+    public function __construct($config) {
+      $this->templatesDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/pages';
+      $this->layoutsDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/layouts';
     }
     
     public function getlayoutFilename() {
