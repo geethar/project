@@ -16,10 +16,14 @@
       return $this->layoutFilename = $newlayoutFilename;
     }
     
-    public function renderLayout($params = array()) {
-      extract($params);
-      include $this->getlayoutFilename();
+    public function renderLayout() {
+     include $this->layoutFilename;
     }
+    
+//    public function renderLayout($params = array()) {
+//      extract($params);
+//      include $this->getlayoutFilename();
+//    }
     
     public function gettemplateFilename() {
       return $this->$templateFilename;
@@ -29,8 +33,12 @@
       return $this->templateFilename = $newtemplateFilename;
     }
     
-    public function renderTemplate($params = array()) {
-      extract $params;
-      include $this->gettemplateFilename();
-    }
+    public function renderTemplate() {
+      include $this->templateFilename;
+     }
+    
+//public function renderTemplate($params = array()) {
+//      extract($params);
+//      include $this->gettemplateFilename();
+//    }
   }
