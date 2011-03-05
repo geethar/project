@@ -1,13 +1,13 @@
 <?php
     class Config {
       private $data=array();
+      
+      public __construct($configFilename){
+        $this->$data = parse_ini_file($configFilename); 
+      }
   
-        function load_values() {
-        
-        }
-  
-        function access_data() {
-  
-        }
+      public function get($key) {
+        return $this->$data[$key];
+      }
 
 }
