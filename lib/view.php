@@ -4,12 +4,18 @@
     private $layoutFilename;
     private $templateFilename;
     
+    private $viewDirectory;
     private $templatesDirectory;
     private $layoutsDirectory;
     
-    public function __construct($config) {
-      $this->templatesDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/pages';
-      $this->layoutsDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/layouts';
+    public function __construct(Config $config){
+
+//      $this->templatesDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/pages';
+//      $this->layoutsDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/layouts';  
+
+      $this->viewDirectory = $config->get('root_dir') . '/' . $config->get('view_dir');
+      $this->templatesDirectory = $this->viewDirectory . '/' . '/pages';
+      $this->layoutsDirectory = $this->viewDirectory . '/' . '/layouts';
     }
     
     public function getlayoutFilename() {
