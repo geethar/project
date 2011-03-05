@@ -6,15 +6,18 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 require '../lib/view.php';
+require '../lib/config.php';
 
-$view = new View();
+$config = new Config('../config.ini');
+
+$view = new View($config);
 
 //echo "The following is a dump of the view object:";
 //var_dump($view); echo "<br /><br />";
 
 $uri = $_SERVER['REQUEST_URI'];
 
-$templateFilename = '../site/view/pages/' . substr($uri, 1) . '.php';
+$templateFilename = substr($uri, 1) . '.php';
 
 //echo "templateFilename is " . $templateFilename . "<br /><br />";
 
@@ -27,7 +30,7 @@ else {
     $view->setTemplateFilename('../site/view/pages/404.html.php');
 }
 
-$view->setLayoutFilename('../site/view/layouts/default.html.php');
+$view->setLayoutFilename('default.html.php');
 
 //$layoutname_check = $view->getLayoutFilename();
 //echo "layoutFilename is" . $layoutname_check . "<br /><br />";

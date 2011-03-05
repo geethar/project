@@ -2,7 +2,7 @@
     class Config {
       private $data=array();
       
-      public __construct($configFilename){
+      public function __construct($configFilename) {
         $this->data = parse_ini_file($configFilename); 
       }
   
