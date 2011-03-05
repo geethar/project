@@ -9,5 +9,10 @@
       public function get($key) {
         return $this->data[$key];
       }
+      
+      public function set($key, $value) {
+        $this->data[$key] = $value;
+        return $this;
+      }
 
 }
