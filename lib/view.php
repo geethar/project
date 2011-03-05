@@ -20,10 +20,10 @@
      include $this->layoutFilename;
     }
     
-//    public function renderLayout($params = array()) {
-//      extract($params);
-//      include $this->getlayoutFilename();
-//    }
+    public function renderLayout($params = array()) {
+      extract($params);
+      include $this->getlayoutFilename();
+    }
     
     public function gettemplateFilename() {
       return $this->$templateFilename;
@@ -37,8 +37,8 @@
       include $this->templateFilename;
      }
     
-//public function renderTemplate($params = array()) {
-//      extract($params);
-//      include $this->gettemplateFilename();
-//    }
+public function renderTemplate($params = array()) {
+      extract($params);
+      include $this->gettemplateFilename();
+    }
   }
