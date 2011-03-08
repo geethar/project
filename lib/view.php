@@ -11,8 +11,8 @@
     public function __construct(Config $config){
 
       $this->viewDirectory = $config->get('root_dir') . '/' . $config->get('view_dir');
-      $this->templatesDirectory = $this->viewDirectory . '/' . '/pages';
-      $this->layoutsDirectory = $this->viewDirectory . '/' . '/layouts';
+      $this->templatesDirectory = $this->viewDirectory . '/' . 'pages';
+      $this->layoutsDirectory = $this->viewDirectory . '/' . 'layouts';
     }
     
     public function getlayoutFilename() {
