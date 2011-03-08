@@ -16,16 +16,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
 $templateFilename = substr($uri, 1) . '.php';
 
-//echo "templateFilename is " . $templateFilename . "<br /><br />";
-
-if (is_readable($templateFilename)) {
-    $view->setTemplateFilename($templateFilename);
-} 
-
-else {
-    header("HTTP/1.0 404 Not Found");
-    $view->setTemplateFilename('../site/view/pages/404.html.php');
-}
+$view->setTemplateFilename($templateFilename);
 
 $view->setLayoutFilename('default.html.php');
 
