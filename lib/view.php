@@ -10,9 +10,6 @@
     
     public function __construct(Config $config){
 
-//      $this->templatesDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/pages';
-//      $this->layoutsDirectory = $config->get('root_dir') . '/' . $config->get('view_dir') . '/' . '/layouts';  
-
       $this->viewDirectory = $config->get('root_dir') . '/' . $config->get('view_dir');
       $this->templatesDirectory = $this->viewDirectory . '/' . '/pages';
       $this->layoutsDirectory = $this->viewDirectory . '/' . '/layouts';
@@ -29,12 +26,7 @@
     public function renderLayout() {
      include $this->layoutsDirectory . '/' . $this->layoutFilename;
     }
-    
-//    public function renderLayout($params = array()) {
-//      extract($params);
-//      include $this->getlayoutFilename();
-//    }
-    
+        
     public function gettemplateFilename() {
       return $this->$templateFilename;
     }  
@@ -47,8 +39,4 @@
       include $this->templatesDirectory . '/' . $this->templateFilename;
      }
     
-//    public function renderTemplate($params = array()) {
-//      extract($params);
-//      include $this->gettemplateFilename();
-//    }
   }
